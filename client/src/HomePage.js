@@ -5,9 +5,8 @@ import Logo from "./components/homepage/Logo";
 import NavBar from "./components/homepage/NavBar";
 import InputField from "./components/homepage/InputField";
 import Buttons from "./components/homepage/Buttons";
-import Footer from "./components/homepage/Footer";
 
-class App extends Component {
+class HomePage extends Component {
   render() {
     return (
       <div className="App">
@@ -15,10 +14,9 @@ class App extends Component {
         <Logo />
         <InputField />
         <Buttons />
-        <Footer />
       </div>
     );
   }
 }
 
-export default App;
+export default HomePage;
