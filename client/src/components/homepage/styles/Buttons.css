@@ -1,0 +1,23 @@
+.ButtonsBox {
+	margin-top: 20px;
+}
+
+.btn {
+	display: inline-block;
+	height: 36px;
+	margin: 11px 4px;
+	padding: 0px 16px;
+	background-color: rgb(242, 242, 242);
+	border: solid 1px rgb(242, 242, 242);
+	border-radius: 2px;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	color: rgb(117, 117, 117);
+	line-height: 35px;
+}
+
+.btn:hover {
+	color: #000;
+	border: solid 1px rgb(198, 198, 198);
+}

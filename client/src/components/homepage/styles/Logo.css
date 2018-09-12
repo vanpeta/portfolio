@@ -1,0 +1,33 @@
+.logo {
+  text-align: center;
+  font-family: Futura;
+  font-size: 90px;
+  display: inline-block;
+  margin-top: 125px;
+}
+
+.name {
+  line-height: 80%;
+}
+
+.lastName {
+  font-size: 18px;
+  color: #557aff;
+  text-align: right;
+}
+
+.c, .l {
+  color: #4285f4;
+}
+
+.a, .s {
+  color: #ea4335;
+}
+
+.r {
+  color: #fbbc03;
+}
+
+.o {
+  color: #34a853;
+}
