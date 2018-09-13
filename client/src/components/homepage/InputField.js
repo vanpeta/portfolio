@@ -37,7 +37,6 @@ class InputField extends Component {
   }
 
   componentDidMount() {
-    console.log("!!!", this.props)
     if (this.props.results && this.props.page === "SearchResultsPage") {
       this.setState({
         searchTerm: this.props.currentSearch

@@ -4,3 +4,18 @@
 	font-family: arial, sans-serif;
 	font-size: 13px;
 }
+
+.categoriesList {
+	padding: 0px;
+	list-style-type: none;
+}
+
+.categories {
+	display: inline-block;
+	padding: 0px 30px 10px 5px;
+	cursor: pointer;
+}
+
+.categories:hover {
+	color: #222;
+}
