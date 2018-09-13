@@ -12,7 +12,7 @@ class HomePage extends Component {
       <div className="App">
         <NavBar />
         <Logo page="HomePage"/>
-        <InputField />
+        <InputField page="HomePage"/>
         <Buttons />
       </div>
     );

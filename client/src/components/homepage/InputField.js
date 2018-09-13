@@ -4,8 +4,8 @@ import "./styles/InputField.css";
 class InputField extends Component {
   render() {
     return (
-      <div className="InputFieldBox">
-        <input className="input" type="text" /><div className="microphone"></div>
+      <div className={this.props.page + "_InputFieldBox"}>
+        <input className={this.props.page + "_input"} type="text" /><div className="microphone"></div>
       </div>
     );
   }

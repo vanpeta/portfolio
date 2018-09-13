@@ -1,9 +1,16 @@
 .SearchResultsPage_NavBarBox {
-	display: flex;
-  justify-content: space-between;
+	/* display: flex;
+	justify-content: space-between; */
+	background-color: #fafafa;
+	border-bottom: solid 1px rgb(235, 235, 235);
 }
 
-.HomePage_NavBarBox, .SearchResultsPage_NavBarBox {
+.HomePage_NavBarBox {
 	width: 100%;
-	margin: 20px 0px;
+	padding: 20px 0px;
+}
+
+.SearchResultsPage_NavBarBox {
+	width: 100%;
+	padding-top: 20px;
 }
