@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+
+import NavBarItems from "../NavBarItems";
+
 import "./styles/NavBar.css";
 
 class NavBar extends Component {
 	render() {
 		return (
-			<div className="NavBarBox">
-				<div className="NavBarItems">
-					<div className="shareBox"></div>
-					<div className="contactButtonBox">Contact</div>
-				</div>
+			<div className="HomePage_NavBarBox">
+				<NavBarItems page="HomePage"/>
 			</div>
 		);
 	}

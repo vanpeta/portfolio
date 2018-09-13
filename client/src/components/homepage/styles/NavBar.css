@@ -1,38 +1,9 @@
-.NavBarBox {
+.SearchResultsPage_NavBarBox {
+	display: flex;
+  justify-content: space-between;
+}
+
+.HomePage_NavBarBox, .SearchResultsPage_NavBarBox {
 	width: 100%;
 	margin: 20px 0px;
-}
-
-.NavBarItems {
-	text-align: right;
-}
-
-.shareBox {
-	display: inline-block;
-	background-image: url(../../../images/googleIcons.png);
-	background-position: -132px -38px;
-	width: 30px;
-	height: 30px;
-	vertical-align: middle;
-	opacity: 0.55;
-	cursor: pointer;
-}
-
-.shareBox:hover {
-	opacity: 1;
-}
-
-.contactButtonBox {
-	vertical-align: middle;
-	margin: 0px 40px 0px 20px;
-	display: inline-block;
-	background-color: #4582ed;
-	padding: 0px 12px;
-	line-height: 28px;
-	font-family: arial,sans-serif;
-	color: #ffffff;
-	font-size: 13px;
-	font-weight: 700;
-	border-radius: 2px;
-	cursor: pointer;
 }

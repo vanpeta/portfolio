@@ -6,10 +6,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import reducers from "./reducers";
 
-import HomePage from "./HomePage";
-import SearchResultsPage from "./SearchResultsPage";
+import HomePage from "./components/pages/HomePage";
+import SearchResultsPage from "./components/pages/SearchResultsPage";
 
-import Footer from "./components/homepage/Footer";
+import Footer from "./components/HomePage/Footer";
 
 
 const store = createStore(reducers, {}, applyMiddleware());

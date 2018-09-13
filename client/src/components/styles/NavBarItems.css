@@ -1,0 +1,38 @@
+.HomePage_NavBarItems, .SearchResultsPage_NavBarItems {
+	text-align: right;
+}
+
+.HomePage_shareBox, .SearchResultsPage_shareBox {
+	display: inline-block;
+	background-image: url(../../images/googleIcons.png);
+	background-position: -132px -38px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	opacity: 0.55;
+	cursor: pointer;
+}
+
+.HomePage_shareBox:hover, .SearchResultsPage_shareBox:hover {
+	opacity: 1;
+}
+
+.HomePage_contactButtonBox, .SearchResultsPage_contactButtonBox {
+	vertical-align: middle;
+	margin: 0px 40px 0px 20px;
+	display: inline-block;
+	background-color: #4582ed;
+	padding: 0px 12px;
+	line-height: 28px;
+	font-family: arial,sans-serif;
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: 700;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+
+.SearchResultsPage_NavBarItems {
+	display: inline-block;
+}

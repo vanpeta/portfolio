@@ -1,0 +1,55 @@
+.HomePage_logo {
+  text-align: center;
+  font-family: Futura;
+  font-size: 90px;
+  display: inline-block;
+  margin-top: 125px;
+}
+
+.HomePage_name {
+  line-height: 80%;
+}
+
+.HomePage_lastName {
+  font-size: 18px;
+  color: #557aff;
+  text-align: right;
+}
+
+.SearchResultsPage_LogoBox {
+	display: inline-block;
+	margin: 0px;
+}
+.SearchResultsPage_logo {
+	margin: 0px;
+  text-align: center;
+  font-family: Futura;
+  font-size: 40px;
+  display: inline-block;
+}
+
+.SearchResultsPage_name {
+  line-height: 80%;
+}
+
+.SearchResultsPage_lastName {
+  font-size: 12px;
+  color: #557aff;
+  text-align: right;
+}
+
+.c, .l {
+  color: #4285f4;
+}
+
+.a, .s {
+  color: #ea4335;
+}
+
+.r {
+  color: #fbbc03;
+}
+
+.o {
+  color: #34a853;
+}
