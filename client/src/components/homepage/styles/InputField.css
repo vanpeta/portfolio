@@ -18,6 +18,10 @@
 	transform: translateY(-50%);
 }
 
+form {
+	display: initial;
+}
+
 .HomePage_input, .SearchResultsPage_input {
 	width: 90%;
 	margin-left: 10px;

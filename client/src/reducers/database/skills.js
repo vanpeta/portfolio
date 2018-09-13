@@ -1,5 +1,6 @@
 export default {
-  about: "About" + this.results.length + "skills (0.37 century)",
+  searchTerms: ["skills", "what do you do?"],
+  about: "About xxx skills (0.37 century)",
   results: [
     {
       title: "HTML5",
