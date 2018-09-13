@@ -2,15 +2,19 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
+import { Redirect } from "react-router-dom";
 
 import "./styles/InputField.css";
 
-import { searchTermEntered } from "../../actions/index";
+import { searchTermEntered, searchTerm } from "../../actions/index";
 
 class InputField extends Component {
   constructor(props) {
     super(props);
-    this.state = { searchTerm: "" };
+    this.state = {
+      searchTerm: "",
+      submit: false
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -24,22 +28,46 @@ class InputField extends Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.searchTerm) {
+      this.props.searchTerm(this.state.searchTerm);
       this.props.searchTermEntered(this.state.searchTerm);
+      this.setState({
+        submit: true
+      });
+    }
+  }
+
+  componentDidMount() {
+    console.log("!!!", this.props)
+    if (this.props.results && this.props.page === "SearchResultsPage") {
+      this.setState({
+        searchTerm: this.props.currentSearch
+      })
+    }
+  }
+
+  componentDidUpdate() {
+      if (this.state.submit) {
+      this.setState({
+        submit: false
+      });
     }
   }
 
   render() {
+    if (this.state.submit) {
+      return <Redirect to="/search_results" />;
+    }
     return (
       <div className={this.props.page + "_InputFieldBox"}>
-      <form onSubmit={this.handleSubmit}>
-        <input
-          className={this.props.page + "_input"}
-          type="text"
-          value={this.state.searchTerm}
-          onChange={this.handleChange}
-        />
-      </form>
-        <div className="microphone"></div>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            className={this.props.page + "_input"}
+            type="text"
+            value={this.state.searchTerm}
+            onChange={this.handleChange}
+          />
+        </form>
+        <div className="microphone" />
       </div>
     );
   }
@@ -48,10 +76,17 @@ class InputField extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      searchTermEntered
+      searchTermEntered, searchTerm
     },
     dispatch
   )
 }
 
-export default connect(null, mapDispatchToProps)(InputField);
+function mapStateToProps(state) {
+  return {
+    currentSearch: state.searchTerm,
+    results: state.results
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(InputField);

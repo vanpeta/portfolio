@@ -1,1 +1,2 @@
 export const SEARCH_TERM_ENTERED = "SEARCH_TERM_ENTERED";
+export const SEARCH_TERM = "SEARCH_TERM";
