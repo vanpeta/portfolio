@@ -6,3 +6,34 @@
 	font-size: 13px;
 	padding-left: 16px;
 }
+
+.resultTitle {
+	margin-bottom: 3px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgb(26, 13, 171);
+}
+
+.resultTitle > a {
+	color: rgb(26, 13, 171);
+}
+
+.resultUrl {
+	color: rgb(0, 102, 33);
+	font-size: 14px;
+}
+
+.resultUrl > cite {
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.resultDescription {
+	color: rgb(84, 84, 84);
+	font-size: 13px;
+}
+
+.resultDescription > span {
+	line-height: 18.2px;
+}

@@ -7,9 +7,15 @@ class Result extends Component {
   render() {
     return (
       <div className="result">
-				<div className="resultTitle">{this.props.title}</div>
-				<div className="resultUrl">{this.props.url}</div>
-				<div className="resultDescription">{this.props.description}</div>
+				<h3 className="resultTitle">
+					<a href={this.props.url} target="_blank">{this.props.title}</a>
+				</h3>
+				<div className="resultUrl">
+					<cite>{this.props.url}</cite>
+				</div>
+				<div className="resultDescription">
+					<span>{this.props.description}</span>
+				</div>
       </div>
     );
   }
