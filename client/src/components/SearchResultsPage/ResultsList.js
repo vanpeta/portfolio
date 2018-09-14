@@ -22,6 +22,7 @@ class ResultsList extends Component {
           url={r.url}
           description={r.description}
           category={r.category}
+          links={r.links}
         />
       )
 		})

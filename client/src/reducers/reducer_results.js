@@ -5,7 +5,7 @@ export default function (state = "", action) {
 		case "SEARCH_TERM_ENTERED":
 		let results;
 			searchResults.map(sr => {
-				if (sr.searchTerms.includes(action.payload)) {
+				if (sr.searchTerms.includes(action.payload.toLowerCase())) {
 					return results = sr;
 				} else {
 					return results;

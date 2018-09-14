@@ -1,9 +1,28 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+
+import Link from "./Link"
 
 import "./styles/About.css";
 
 class Result extends Component {
+
+	renderLinks() {
+		if (this.props.links.length > 0) {
+			return this.props.links.map((l, i) => {
+				return (
+					<Link
+						key={i}
+						text={l.text}
+						image={l.image}
+						mapLocation={l.mapLocation}
+						description={l.description}
+					/>
+				);
+			})
+		} else {
+			return null
+		}
+	}
   render() {
     return (
       <div className="result">
@@ -16,13 +35,12 @@ class Result extends Component {
 				<div className="resultDescription">
 					<span>{this.props.description}</span>
 				</div>
+				<div className="resultLinksList">
+					{this.renderLinks()}
+				</div>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return { results: state.results };
-}
-
-export default connect(mapStateToProps)(Result);
+export default Result;
