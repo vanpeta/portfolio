@@ -7,13 +7,20 @@
 
 .categoriesList {
 	padding: 0px;
+	margin: 0px;
 	list-style-type: none;
 }
 
-.categories {
+.category {
 	display: inline-block;
-	padding: 0px 30px 10px 5px;
+	padding: 0px 15px 10px 15px;
 	cursor: pointer;
+	border-bottom: solid 3px rgb(250, 250, 250, 1);
+}
+
+.active {
+	color: #1A73E8 !important;
+	border-bottom-color: #1A73E8 !important;
 }
 
 .categories:hover {

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import NavBarItems from "../NavBarItems";
 import Logo from "../Logo";
 import InputField from "../HomePage/InputField";
-import Categories from "./Categories";
+import CategoriesList from "./CategoriesList";
 
 class NavBar extends Component {
   render() {
@@ -12,7 +12,7 @@ class NavBar extends Component {
 				<Logo page="SearchResultsPage"/>
         <InputField page="SearchResultsPage"/>
 				<NavBarItems page="SearchResultsPage"/>
-        <Categories />
+        <CategoriesList />
       </div>
     );
   }
