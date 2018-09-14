@@ -1,6 +1,6 @@
 import skills from "./skills";
 import experience from "./experience"
-
+import about from "./about";
 export default [
-	skills, experience/*, "projects", "about", "education", "interests", "awards", "references", "social media"*/
-]
+  experience, skills, about/*, "projects", "about", "education", "interests", "awards", "references", "social media"*/
+];

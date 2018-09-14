@@ -4,13 +4,16 @@ export default function (state = "", action) {
 	switch (action.type) {
 		case "SEARCH_TERM_ENTERED":
 		let results;
-			searchResults.map(x => {
-				if (x.searchTerms.includes(action.payload)) {
-					return results = x;
+			searchResults.map(sr => {
+				if (sr.searchTerms.includes(action.payload)) {
+					return results = sr;
 				} else {
-					return results = "No matches"
+					return results;
 				}
-			});
+			})
+			if (!results) {
+				return results = "No matches"
+			};
 			console.log("xxxx", results);
     	return results;
     default:
