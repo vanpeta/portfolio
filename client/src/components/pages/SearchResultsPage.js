@@ -5,6 +5,7 @@ import NavBar from "../SearchResultsPage/NavBar"
 import About from "../SearchResultsPage/About"
 import ResultsList from "../SearchResultsPage/ResultsList";
 import NoResults from "../SearchResultsPage/NoResults";
+import RightRail from "../SearchResultsPage/RightRail";
 
 class SearchResultsPage extends Component {
 
@@ -13,10 +14,16 @@ class SearchResultsPage extends Component {
 		if (this.props.results === "No matches" || !this.props.results) {
 			results = <NoResults />;
 		} else {
+			let rightRail;
+			if (this.props.link) {
+				rightRail = <RightRail />
+			} else {
+				rightRail = null;
+			}
 			results =
 				<div>
 					<ResultsList />
-					{/* <RightRail /> */}
+					{rightRail}
 				</div>
 		}
 		return results;
@@ -34,7 +41,7 @@ class SearchResultsPage extends Component {
 }
 
 function mapStateToProps(state) {
-	return { results: state.results, category: state.category };
+	return { results: state.results, category: state.category, link: state.link };
 }
 
 export default connect(mapStateToProps)(SearchResultsPage);

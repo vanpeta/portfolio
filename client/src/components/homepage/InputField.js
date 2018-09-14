@@ -6,7 +6,7 @@ import { Redirect } from "react-router-dom";
 
 import "./styles/InputField.css";
 
-import { searchTermEntered, searchTerm } from "../../actions/index";
+import { searchTermEntered, searchTerm, linkSelected } from "../../actions/index";
 
 class InputField extends Component {
   constructor(props) {
@@ -30,6 +30,7 @@ class InputField extends Component {
     if (this.state.searchTerm) {
       this.props.searchTerm(this.state.searchTerm);
       this.props.searchTermEntered(this.state.searchTerm);
+      this.props.linkSelected(null);
       this.setState({
         submit: true
       });
@@ -75,7 +76,7 @@ class InputField extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      searchTermEntered, searchTerm
+      searchTermEntered, searchTerm, linkSelected
     },
     dispatch
   )

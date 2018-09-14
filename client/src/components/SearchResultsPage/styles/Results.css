@@ -37,3 +37,14 @@
 .resultDescription > span {
 	line-height: 18.2px;
 }
+
+.link {
+	margin: 5px 10px 0px 0px;
+	display: inline-block;
+	color: rgb(26, 13, 171);
+	cursor: pointer;
+}
+
+.link:hover {
+	text-decoration: underline;
+}

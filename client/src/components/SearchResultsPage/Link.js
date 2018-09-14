@@ -21,7 +21,7 @@ class Link extends Component {
 	}
   render() {
     return (
-      <div className="" onClick={this.handleClick}>
+			<div className="link" onClick={this.handleClick}>
         {this.props.text}
       </div>
     );
