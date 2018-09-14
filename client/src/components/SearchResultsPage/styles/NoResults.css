@@ -1,0 +1,15 @@
+.noResults {
+	margin: 65px 0px 0px 150px;
+	padding-left: 16px;
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.searchTerm {
+	font-weight: bold;
+}
+
+.suggestions {
+	margin-top: 1em;
+}

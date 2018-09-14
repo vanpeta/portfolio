@@ -28,9 +28,6 @@ class ResultsList extends Component {
   }
   
   render() {
-    if (this.props.results === "No matches" || !this.props.results) {
-      return null;
-    }
     return (
       <div className="ResultsBox">
 				{this.renderResults()}
