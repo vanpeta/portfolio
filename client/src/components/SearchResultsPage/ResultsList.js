@@ -8,7 +8,13 @@ import "./styles/Results.css";
 class ResultsList extends Component {
 
 	renderResults() {
-		return this.props.results.results.map((r, i) => {
+    let arr = []
+    if (this.props.category !== "All") {
+      arr = this.props.results.results.filter(r => r.category === this.props.category);
+    } else {
+      arr = this.props.results.results;
+    }
+		return arr.map((r, i) => {
 			return (
         <Result
           key={i}
@@ -34,7 +40,7 @@ class ResultsList extends Component {
 }
 
 function mapStateToProps(state) {
-  return { results: state.results };
+  return { results: state.results, category: state.category };
 }
 
 export default connect(mapStateToProps)(ResultsList);
