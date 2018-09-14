@@ -1,6 +1,6 @@
 export default {
   searchTerms: ["skills", "what do you do?"],
-  about: "About xxx skills (0.37 century)",
+  about: "professional skills, probably more (0.37 century)",
   results: [
     {
       title: "HTML5",
