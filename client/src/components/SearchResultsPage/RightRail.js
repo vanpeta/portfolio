@@ -1,15 +1,28 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-import "./styles/About.css";
+import "./styles/RightRail.css";
 
 class RightRail extends Component {
 	render() {
     return (
-      <div className="">
-        rightRail
+			<div className="rightRail">
+				<div className="rightRailTitle">{this.props.link.text}</div>
+				<div className="rightRailImage">
+					<img
+						alt={this.props.link.text}
+						src={this.props.link.image}
+					/>
+				</div>
       </div>
     );
   }
 }
 
-export default RightRail;
+function mapStateToProps(state) {
+	return {
+		link: state.link
+	}
+}
+
+export default connect(mapStateToProps)(RightRail);
