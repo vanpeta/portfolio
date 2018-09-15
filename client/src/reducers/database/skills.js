@@ -1,5 +1,5 @@
 export default {
-  searchTerms: ["skills", "what do you do?"],
+  searchTerms: ["skills", "what do you do?", "what do you know to do?", "what skills do you have?"],
   about: "professional skills, probably more (0.37 century)",
   results: [
     {

@@ -1,5 +1,5 @@
 export default {
-  searchTerms: ["about", "who are you?", "life"],
+  searchTerms: ["about", "who are you?", "life", "how old are you?", "where were you born?"],
   about: "life stages in (0.37 century)",
   results: [
     {
