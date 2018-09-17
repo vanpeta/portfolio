@@ -12,13 +12,13 @@ export default {
         {
           text: "Medina del Campo",
           image: "/images/medina_del_campo.png",
-          mapLocation: "coordinates",
+          mapLocation: { lat: 41.3086036, lng: -4.9193213},
           description: ""
         },
         {
           text: "Valladolid",
           image: "/images/valladolid.png",
-          mapLocation: "coordinates",
+          mapLocation: { lat: 41.3086036, lng: -4.9193213 },
           description: ""
         }
       ]
@@ -33,13 +33,13 @@ export default {
         {
           text: "Segovia",
 					image: "/images/segovia.png",
-          mapLocation: "coordinates",
+          mapLocation: { lat: 40.9412812, lng: -4.1297114 },
           description: ""
         },
         {
           text: "Universidad de Valladolid",
-					image: "/images/universidad_de_valladolid.png",
-          mapLocation: "coordinates",
+          image: "/images/universidad_de_valladolid.png",
+          mapLocation: { lat: 40.9513483, lng: -4.124825 },
           description: ""
         }
       ]
@@ -54,13 +54,13 @@ export default {
         {
           text: "London",
 					image: "/images/london.jpg",
-          mapLocation: "coordinates",
+          mapLocation: { lat: 51.5287718, lng: -0.241679 },
           description: ""
         },
         {
           text: "Madrid",
 					image: "/images/madrid.png",
-          mapLocation: "coordinates",
+          mapLocation: { lat: 40.4381311, lng: -3.8196178 },
           description: ""
         }
       ]
@@ -75,13 +75,13 @@ export default {
         {
           text: "Los Angeles",
           image: "/images/los_angeles.jpg",
-          mapLocation: "coordinates",
+          mapLocation: { lat: 34.0206842, lng: -118.5518141 },
           description: ""
         },
         {
           text: "Huntington Beach",
           image: "/images/huntington_beach.jpg",
-          mapLocation: "coordinates",
+          mapLocation: { lat: 33.6931097, lng: -118.0815524 },
           description: ""
         }
       ]

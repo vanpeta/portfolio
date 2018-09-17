@@ -16,3 +16,12 @@
 .rightRailImage > img{
 	width: 366px;
 }
+
+.mapContainer {
+	width: 366px;
+	height: 366px;
+}
+
+.mapContainer > div {
+	position: relative !important;
+}
