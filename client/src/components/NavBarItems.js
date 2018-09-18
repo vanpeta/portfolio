@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import { contacting } from "../actions/index";
 
 import ContactContainer from "./ContactContainer";
 
@@ -7,17 +11,15 @@ import "./styles/NavBarItems.css";
 class NavBarItems extends Component {
   constructor(props) {
     super(props);
-    this.state = { contacting: false };
     this.handleClick = this.handleClick.bind(this);
   }
 
 	handleClick() {
-		console.log("clicking")
-    this.setState({ contacting: true });
+    this.props.contacting(true);
   }
 
   render() {
-		const contacting = this.state.contacting ? <ContactContainer /> : null;
+		const contacting = this.props.isContacting === true ? <ContactContainer /> : null;
     return (
       <div className={this.props.page + "_NavBarItems"}>
 				{ contacting }
@@ -33,4 +35,19 @@ class NavBarItems extends Component {
   }
 }
 
-export default NavBarItems;
+function mapStateToProps (state) {
+	return {
+		isContacting: state.contacting
+	}
+}
+
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators(
+		{
+			contacting
+		},
+		dispatch
+	)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBarItems);
