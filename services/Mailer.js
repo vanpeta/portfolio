@@ -17,10 +17,10 @@ class Mailer {
 	setMailOptions() {
 		this.mailOptions = {
 			from: this.email,
-			to: "ajalmaguer@gmail.com",
-			subject: "Hello",
+			to: "",
+			subject: "",
 			generateTextFromHTML: true,
-			html: "<b>Hello world</b>"
+			html: ""
 		}
 	}
 

@@ -4,20 +4,16 @@ const HtmlGenerator = require('../services/HtmlGenerator');
 
 module.exports = app => {
 	app.get("/api/noresults", (req, res) => {
-		const term = req.query.term;
-		let data = {
-			term: term
-		}
-		console.log(data);
+		const data = { term: req.query.term };
 		HtmlGenerator("noTerm", data)
-			.then(function (htmlString) {
+			.then( htmlString => {
 				const mailer = new Mailer()
-				mailer.sendEmail(process.env.emailTo, "Portfolio: Someone looked for a term with no results", htmlString, function (response) {
+				mailer.sendEmail(process.env.emailTo, "Portfolio: Someone looked for a term with no results", htmlString, response => {
 					console.log("Email '", process.env.email, "' sent to ", process.env.emailTo, response);
 				})
-			}).catch(function (err) {
+			}).catch( err => {
 				console.log('err =', err);
 			});
 		res.send("hello world");
-	})
+	});
 }
