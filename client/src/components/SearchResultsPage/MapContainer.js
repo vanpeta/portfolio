@@ -1,27 +1,14 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+import { GoogleApiWrapper } from "google-maps-react";
+
+import ConnectedMap from "./ConnectedMap";
 
 class MapContainer extends Component {
   render() {
-		console.log("APIKEY", process.env.REACT_APP_MAPS_API_KEY);
-		console.log("NODE", process.env.NODE_ENV);
-		const style = {
-			width: '366px',
-			height: '366px'
-		}
+
     return (
 			<div className="mapContainer">
-				<Map
-					google={this.props.google}
-					zoom={5}
-					initialCenter={{ lat: this.props.lat, lng: this.props.lng }}
-					style={style}
-				>
-					<Marker
-						title={this.props.name}
-						position={{ lat: this.props.lat, lng: this.props.lng }}
-						/>
-				</Map>
+				<ConnectedMap google={this.props.google} />
 			</div>
     );
   }
