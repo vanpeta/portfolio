@@ -3,6 +3,8 @@ import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 class MapContainer extends Component {
   render() {
+		console.log("APIKEY", process.env.REACT_APP_MAPS_API_KEY);
+		console.log("NODE", process.env.NODE_ENV);
 		const style = {
 			width: '366px',
 			height: '366px'
