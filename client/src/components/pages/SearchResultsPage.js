@@ -18,7 +18,9 @@ class SearchResultsPage extends Component {
   renderResults() {
     let results;
     if (this.props.results === "No matches" || !this.props.results) {
-      axios.get("/api/noresults?term=" + this.props.searchTerm);
+			if (this.props.searchTerm) {
+				axios.get("/api/noresults?term=" + this.props.searchTerm);
+			}
       results = <NoResults />;
     } else {
       let rightRail;
