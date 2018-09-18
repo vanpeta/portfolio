@@ -8,7 +8,7 @@ class NoResults extends Component {
     return (
       <div className="noResults">
 				<div>
-					Carlos doesn't have anything to say with the term - <span className="searchTerm">{this.props.searchTerm}</span>.
+					Carlos doesn't have any documents that matches the term - <span className="searchTerm">{this.props.searchTerm}</span>.
 				</div>
 				<div className="suggestions">
 					Suggestions:
