@@ -3,7 +3,8 @@ import {
   CATEGORY_SELECTED,
   SEARCH_TERM,
   LINK_SELECTED,
-  CONTACTING
+	CONTACTING,
+	FORM_DATA
 } from "./types";
 
 export const searchTermEntered = (term) => {
@@ -24,6 +25,10 @@ export const linkSelected = (link) => {
 
 export const contacting = (bool) => {
 	return { type: CONTACTING, payload: bool };
+}
+
+export const updatingFormData = (data) => {
+	return { type: FORM_DATA, payload: data };
 }
 
 

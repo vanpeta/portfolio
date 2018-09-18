@@ -5,7 +5,6 @@ export default function (state = "", action) {
 			return null;
 		}
 			const obj = Object.assign({}, action.payload);
-			console.log("zzzzz",obj);
 			return obj;
 		default:
 	}

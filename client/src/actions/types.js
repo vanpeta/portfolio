@@ -3,3 +3,4 @@ export const SEARCH_TERM = "SEARCH_TERM";
 export const CATEGORY_SELECTED = "CATEGORY_SELECTED";
 export const LINK_SELECTED = "LINK_SELECTED";
 export const CONTACTING = "CONTACTING";
+export const FORM_DATA = "FORM_DATA";
