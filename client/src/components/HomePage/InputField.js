@@ -59,13 +59,16 @@ class InputField extends Component {
     }
     return (
       <div className={this.props.page + "_InputFieldBox"}>
-        <form onSubmit={this.handleSubmit}>
+        <form className={this.props.page + "_InputFieldForm"} onSubmit={this.handleSubmit}>
           <input
             className={this.props.page + "_input"}
             type="text"
             value={this.state.searchTerm}
             onChange={this.handleChange}
           />
+          <div className="magnifyingGlassContainer">
+            <div className="magnifyingGlass" />
+          </div>
         </form>
         <div className="microphone" />
       </div>
