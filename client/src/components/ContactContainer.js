@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { contacting } from "../actions/index";
+import { contacting, contactMe } from "../actions/index";
 import "./styles/Contact.css";
 import ContactForm from "./ContactForm";
 
@@ -18,7 +18,9 @@ class ContactContainer extends Component {
 	}
 
 	handleSend() {
-		console.log("data", this.props.formData)
+		console.log("data", this.props.formData);
+		this.props.contactMe(this.props.formData);
+
 	}
 
 	render() {
@@ -46,7 +48,7 @@ class ContactContainer extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      contacting
+			contacting, contactMe
     },
     dispatch
   );

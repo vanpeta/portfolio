@@ -4,9 +4,10 @@ require("dotenv").load();
 
 const app = express();
 
-require("./config/routes")(app);
-
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+require("./config/routes")(app);
 
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets

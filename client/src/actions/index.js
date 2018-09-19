@@ -1,10 +1,13 @@
+import axios from "axios";
+
 import {
   SEARCH_TERM_ENTERED,
   CATEGORY_SELECTED,
   SEARCH_TERM,
   LINK_SELECTED,
-	CONTACTING,
-	FORM_DATA
+  CONTACTING,
+  FORM_DATA,
+  CONTACT_ME
 } from "./types";
 
 export const searchTermEntered = (term) => {
@@ -31,4 +34,8 @@ export const updatingFormData = (data) => {
 	return { type: FORM_DATA, payload: data };
 }
 
-
+export const contactMe = (data) => {
+	console.log("ACTION", data);
+	const request = axios.post("/api/contactme", data);
+	return { type: CONTACT_ME, payload: request };
+}
