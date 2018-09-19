@@ -3,20 +3,18 @@ import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import promiseMiddleware from "redux-promise";
 
 import reducers from "./reducers";
 
 import HomePage from "./components/pages/HomePage";
 import SearchResultsPage from "./components/pages/SearchResultsPage";
-
 import Footer from "./components/HomePage/Footer";
 
-
-const store = createStore(reducers, {}, applyMiddleware());
-
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore);
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
         <Switch>

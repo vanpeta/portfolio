@@ -40,7 +40,6 @@ export const updatingFormData = (data) => {
 }
 
 export const contactMe = (data) => {
-	console.log("ACTION", data);
 	const request = axios.post("/api/contactme", data);
 	return { type: CONTACT_ME, payload: request };
 }

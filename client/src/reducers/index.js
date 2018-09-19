@@ -7,9 +7,10 @@ import link from "./reducer_link";
 import contacting from "./reducer_contacting";
 import sharing from "./reducer_sharing";
 import formData from "./reducer_formData";
+import contactMe from "./reducer_contact_me";
 
 const rootReducer = combineReducers({
-	results, searchTerm, category, link, contacting, sharing, formData
+	results, searchTerm, category, link, contacting, sharing, formData, contactMe
 });
 
 export default rootReducer;

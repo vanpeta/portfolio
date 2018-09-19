@@ -20,10 +20,11 @@ class ContactContainer extends Component {
 	handleSend() {
 		console.log("data", this.props.formData);
 		this.props.contactMe(this.props.formData);
-
+		this.props.contacting(false);
 	}
 
 	render() {
+		console.log("ZZZZZZZZZZZ", this.props.contactMeResponse);
 		return (
 			<div className="ContactContainer">
 				<div className="contactFormPannel">
@@ -34,6 +35,7 @@ class ContactContainer extends Component {
 						<div>
 							<ContactForm />
 						</div>
+						<div className="contactMeResponse"></div>
 						<div className="contactForButtonBox">
 							<div className="contactFormButton" id="cancel" onClick={this.handleClose}>CANCEL</div>
 							<div className="contactFormButton" onClick={this.handleSend}>SEND</div>
@@ -55,9 +57,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-	return {
-		formData: state.formData
-	}
+	return { formData: state.formData, contactMeResponse: contactMe };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactContainer);
