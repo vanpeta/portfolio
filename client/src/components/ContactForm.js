@@ -8,16 +8,18 @@ import "./styles/Contact.css";
 class ContactForm extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {textarea: "", email: ""}
+		this.state = {textarea: "", email: "", name: ""}
 		this.handleChange = this.handleChange.bind(this);
 	}
 
 	handleChange() {
 		this.setState({
 			textarea: this.refs.textArea.value,
-			email: this.refs.email.value })
-		console.log("state",this.state)
-		this.props.updatingFormData(this.state);
+			email: this.refs.email.value,
+			name: this.refs.name.value
+		 }, () => {
+				this.props.updatingFormData(this.state);
+			})
 	}
 
 	render() {
@@ -30,6 +32,14 @@ class ContactForm extends Component {
 						value={this.state.textarea}
 						onChange={this.handleChange}
 						placeholder="What do you want to say?"
+					/>
+					<input
+						className="ContactFormName"
+						type="text"
+						ref="name"
+						onChange={this.handleChange}
+						value={this.state.name}
+						placeholder="Your Name"
 					/>
 					<input
 						className="ContactFormEmail"
