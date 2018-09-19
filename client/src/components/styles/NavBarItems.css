@@ -36,3 +36,9 @@
 .SearchResultsPage_NavBarItems {
 	float: right;
 }
+
+@media only screen and (max-width: 600px) {
+	.HomePage_contactButtonBox {
+		margin: 0px 20px;
+	}
+}

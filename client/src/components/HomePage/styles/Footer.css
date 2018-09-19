@@ -23,3 +23,9 @@
 .privacy:hover {
 	text-decoration: underline;
 }
+
+@media only screen and (max-width: 600px) {
+	.privacy {
+		margin-right: 20px;
+	}
+}

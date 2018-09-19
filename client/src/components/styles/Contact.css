@@ -114,3 +114,10 @@
 #cancel {
 	color: rgb(117, 117, 117);
 }
+
+@media only screen and (max-width: 600px) {
+	.contactFormPannel {
+		width: 80%;
+		height: 80%;
+	}
+}

@@ -54,3 +54,20 @@
 .o {
   color: #34a853;
 }
+
+@media only screen and (max-width: 600px) {
+  .SearchResultsPage_LogoBox {
+    display: block;
+    margin: 0px;
+  }
+  .HomePage_logo {
+    margin-top: 50px;
+  }
+  .HomePage_name {
+    font-size: 50px;
+    line-height: 80%;
+  }
+  .HomePage_lastName {
+    font-size: 12px;
+  }
+}
