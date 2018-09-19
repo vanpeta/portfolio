@@ -32,8 +32,8 @@ class InputField extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.searchTerm) {
-      this.props.searchTermEntered(this.state.searchTerm);
+    if (this.props.currentSearch) {
+      this.props.searchTermEntered(this.props.currentSearch);
       this.props.linkSelected(null);
       this.setState({
         submit: true

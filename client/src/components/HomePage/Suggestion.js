@@ -10,7 +10,7 @@ class Suggestion extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 	handleClick() {
-		console.log("click")
+		console.log("click", this.props.text);
 		this.props.searchTerm(this.props.text)
 	}
 	render() {
