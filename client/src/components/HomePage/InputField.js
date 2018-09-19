@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-
 import { Redirect } from "react-router-dom";
+
+import SuggestionsList from "./SuggestionsList";
 
 import "./styles/InputField.css";
 
@@ -13,10 +14,13 @@ class InputField extends Component {
     super(props);
     this.state = {
       searchTerm: "",
-      submit: false
+      submit: false,
+      suggestions: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.showSuggestions = this.showSuggestions.bind(this);
+    this.hideSuggestions = this.hideSuggestions.bind(this);
   }
 
   handleChange(e) {
@@ -37,12 +41,16 @@ class InputField extends Component {
     }
   }
 
-  componentDidMount() {
-    if (this.props.results && this.props.page === "SearchResultsPage") {
-      this.setState({
-        searchTerm: this.props.currentSearch
-      })
-    }
+  showSuggestions() {
+    console.log("focus")
+    this.setState({ suggestions: true });
+  }
+
+  hideSuggestions() {
+    setTimeout(() => {
+      console.log("blur")
+      this.setState({ suggestions: false });
+    }, 200);
   }
 
   componentDidUpdate() {
@@ -54,23 +62,29 @@ class InputField extends Component {
   }
 
   render() {
+    const suggestions = this.state.suggestions && !this.state.searchTerm ? <SuggestionsList /> : null; 
     if (this.state.submit) {
       return <Redirect to="/search_results" />;
     }
     return (
-      <div className={this.props.page + "_InputFieldBox"}>
-        <form className={this.props.page + "_InputFieldForm"} onSubmit={this.handleSubmit}>
-          <input
-            className={this.props.page + "_input"}
-            type="text"
-            value={this.state.searchTerm}
-            onChange={this.handleChange}
-          />
-          <div className="magnifyingGlassContainer" onClick={this.handleSubmit}>
-            <div className="magnifyingGlass" />
-          </div>
-        </form>
-        <div className="microphone" />
+      <div className={"biggerBox " + this.props.page + "_biggerBox"}>
+        <div className={this.props.page + "_InputFieldBox"}>
+          <form className={this.props.page + "_InputFieldForm"} onSubmit={this.handleSubmit}>
+            <input
+              className={this.props.page + "_input"}
+              type="text"
+              value={this.props.currentSearch}
+              onChange={this.handleChange}
+              onFocus={this.showSuggestions}
+              onBlur={this.hideSuggestions}
+            />
+            <div className="magnifyingGlassContainer" onClick={this.handleSubmit}>
+              <div className="magnifyingGlass" />
+            </div>
+            <div className="microphone" />
+          </form>
+        </div>
+        { suggestions }
       </div>
     );
   }

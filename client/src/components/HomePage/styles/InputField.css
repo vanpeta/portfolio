@@ -1,3 +1,6 @@
+.SearchResultsPage_biggerBox {
+	display: inline-block !important;
+}
 .HomePage_InputFieldBox, .SearchResultsPage_InputFieldBox {
 	width: 584px;
 	height: 44px;
