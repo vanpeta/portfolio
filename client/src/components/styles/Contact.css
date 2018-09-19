@@ -115,7 +115,7 @@
 	color: rgb(117, 117, 117);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
 	.contactFormPannel {
 		width: 80%;
 		height: 80%;

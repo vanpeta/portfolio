@@ -66,7 +66,7 @@ class InputField extends Component {
             value={this.state.searchTerm}
             onChange={this.handleChange}
           />
-          <div className="magnifyingGlassContainer">
+          <div className="magnifyingGlassContainer" onClick={this.handleSubmit}>
             <div className="magnifyingGlass" />
           </div>
         </form>

@@ -55,7 +55,7 @@
   color: #34a853;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
   .HomePage_logo {
     margin-top: 50px;
   }
