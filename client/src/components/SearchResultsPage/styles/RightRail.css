@@ -25,3 +25,9 @@
 .mapContainer > div {
 	position: relative !important;
 }
+
+@media only screen and (max-width: 600px) {
+	.rightRail {
+		display: none;
+	}
+}

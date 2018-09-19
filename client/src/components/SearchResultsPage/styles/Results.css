@@ -51,7 +51,24 @@
 
 @media only screen and (max-width: 600px) {
 	.ResultsBox {
-		margin: 5px;
+		margin: 5px auto;
 		width: 95%;
+	}
+	.resultTitle {
+		margin: 10px 10px 3px 10px;
+	}
+	.resultUrl > cite {
+		margin: 0px 10px 10px 10px;
+	}
+	.resultDescription {
+		margin: 0px 10px;
+		padding: 10px 0px;
+		border-top: solid 1px rgba(0,0,0,0.16);
+	}
+	.link {
+		margin: 10px 5px 10px 10px;
+		padding: 5px;
+		border-radius: 2px;
+		border: solid 1px rgba(0,0,0,0.16);
 	}
 }

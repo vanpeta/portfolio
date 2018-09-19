@@ -18,5 +18,6 @@
 @media only screen and (max-width: 600px) {
 	.SearchResultsPage_NavBarBox {
 		text-align: center;
+		background-color: #ffffff;
 	}
 }

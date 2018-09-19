@@ -20,6 +20,7 @@ class InputField extends Component {
   }
 
   handleChange(e) {
+    e.preventDefault();
     this.setState({searchTerm: e.target.value}, () => {
       this.props.searchTerm(this.state.searchTerm);
     });
