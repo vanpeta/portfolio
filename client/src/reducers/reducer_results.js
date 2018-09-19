@@ -4,7 +4,6 @@ import axios from "axios";
 export default function (state = "", action) {
 	switch (action.type) {
 		case "SEARCH_TERM_ENTERED":
-		console.log("REDUCEEER", action.payload)
 		let results;
 			searchResults.map(sr => {
 				if (sr.searchTerms.includes(action.payload.toLowerCase())) {

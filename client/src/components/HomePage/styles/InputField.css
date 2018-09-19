@@ -61,6 +61,9 @@ form {
 }
 
 @media only screen and (max-width: 950px) {
+	.SearchResultsPage_biggerBox {
+		display: block !important;
+	}
 	.HomePage_InputFieldBox, .SearchResultsPage_InputFieldBox {
 		width: 95%;
 		border-radius: 10px 10px;

@@ -12,7 +12,7 @@ class SuggestionsList extends Component {
 	}
   render() {
     return (
-      <div className="SuggestionsList">
+      <div className={this.props.page + "_SuggestionsList"}>
         {this.renderSugesstions()}
       </div>
     );

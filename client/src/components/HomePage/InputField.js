@@ -42,13 +42,11 @@ class InputField extends Component {
   }
 
   showSuggestions() {
-    console.log("focus")
     this.setState({ suggestions: true });
   }
 
   hideSuggestions() {
     setTimeout(() => {
-      console.log("blur")
       this.setState({ suggestions: false });
     }, 200);
   }
@@ -62,7 +60,7 @@ class InputField extends Component {
   }
 
   render() {
-    const suggestions = this.state.suggestions && !this.state.searchTerm ? <SuggestionsList /> : null; 
+    const suggestions = this.state.suggestions && !this.state.searchTerm ? <SuggestionsList page={this.props.page}/> : null; 
     if (this.state.submit) {
       return <Redirect to="/search_results" />;
     }
