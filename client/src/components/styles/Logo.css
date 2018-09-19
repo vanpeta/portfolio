@@ -56,10 +56,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .SearchResultsPage_LogoBox {
-    display: block;
-    margin: 0px;
-  }
   .HomePage_logo {
     margin-top: 50px;
   }
@@ -69,5 +65,8 @@
   }
   .HomePage_lastName {
     font-size: 12px;
+  }
+  .SearchResultsPage_LogoBox {
+    margin: 0px;
   }
 }

@@ -14,3 +14,9 @@
 .suggestions {
 	margin-top: 1em;
 }
+
+@media only screen and (max-width: 600px) {
+	.noResults {
+		margin: 5px;
+	}
+}
