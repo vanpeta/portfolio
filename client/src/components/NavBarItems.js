@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { contacting } from "../actions/index";
+import { contacting, sharing } from "../actions/index";
 
 import ContactContainer from "./ContactContainer";
+import SharingContainer from "./SharingContainer";
 
 import "./styles/NavBarItems.css";
 
@@ -12,6 +13,11 @@ class NavBarItems extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.showSharing = this.showSharing.bind(this);
+  }
+
+  showSharing() {
+    this.props.sharing(true);
   }
 
 	handleClick() {
@@ -19,11 +25,14 @@ class NavBarItems extends Component {
   }
 
   render() {
-		const contacting = this.props.isContacting === true ? <ContactContainer /> : null;
+    const contacting = this.props.isContacting ? <ContactContainer /> : null;
+    const sharing = this.props.isSharing ? <SharingContainer /> : null;
     return (
       <div className={this.props.page + "_NavBarItems"}>
 				{ contacting }
-				<div className={this.props.page + "_shareBox"} />
+				<div className={this.props.page + "_shareBox"} onClick={this.showSharing}>
+          { sharing }
+        </div>
         <div
           className={this.props.page + "_contactButtonBox"}
           onClick={this.handleClick}
@@ -37,14 +46,14 @@ class NavBarItems extends Component {
 
 function mapStateToProps (state) {
 	return {
-		isContacting: state.contacting
+    isContacting: state.contacting, isSharing: state.sharing
 	}
 }
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators(
 		{
-			contacting
+      contacting, sharing
 		},
 		dispatch
 	)

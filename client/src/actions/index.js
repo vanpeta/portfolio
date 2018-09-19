@@ -5,7 +5,8 @@ import {
   CATEGORY_SELECTED,
   SEARCH_TERM,
   LINK_SELECTED,
-  CONTACTING,
+	CONTACTING,
+	SHARE,
   FORM_DATA,
   CONTACT_ME
 } from "./types";
@@ -28,6 +29,10 @@ export const linkSelected = (link) => {
 
 export const contacting = (bool) => {
 	return { type: CONTACTING, payload: bool };
+}
+
+export const sharing = (bool) => {
+	return { type: SHARE, payload: bool };
 }
 
 export const updatingFormData = (data) => {
