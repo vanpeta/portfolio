@@ -1,4 +1,5 @@
 import searchResults from "./database/searchResults-EN";
+import axios from "axios";
 
 export default function (state = "", action) {
 	switch (action.type) {
@@ -12,6 +13,7 @@ export default function (state = "", action) {
 				}
 			})
 			if (!results) {
+				axios.get("/api/noresults?term=" + action.payload);
 				return results = "No matches"
 			};
 			console.log("xxxx", results);

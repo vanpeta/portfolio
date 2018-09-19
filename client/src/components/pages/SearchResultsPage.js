@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import axios from "axios";
 
 import NavBar from "../SearchResultsPage/NavBar"
 import About from "../SearchResultsPage/About"
@@ -18,9 +17,6 @@ class SearchResultsPage extends Component {
   renderResults() {
     let results;
     if (this.props.results === "No matches" || !this.props.results) {
-			if (this.props.searchTerm) {
-				axios.get("/api/noresults?term=" + this.props.searchTerm);
-			}
       results = <NoResults />;
     } else {
       let rightRail;
