@@ -40,7 +40,6 @@ class SearchResultsPage extends Component {
   }
 
   render() {
-		console.log("RENDERING", this.props);
     return (
       <div className="">
         <NavBar />

@@ -20,15 +20,14 @@ class InputField extends Component {
   }
 
   handleChange(e) {
-    this.setState({
-      searchTerm: e.target.value
+    this.setState({searchTerm: e.target.value}, () => {
+      this.props.searchTerm(this.state.searchTerm);
     });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.searchTerm) {
-      this.props.searchTerm(this.state.searchTerm);
       this.props.searchTermEntered(this.state.searchTerm);
       this.props.linkSelected(null);
       this.setState({
