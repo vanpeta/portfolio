@@ -13,6 +13,10 @@
 	text-align: left;
 }
 
+.SearchResultsPage_SuggestionsList {
+	margin: -22px 157px 0px;
+}
+
 .Suggestion {
 	padding: 5px;
 	border: solid 1px #ffffff;
