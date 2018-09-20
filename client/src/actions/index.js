@@ -5,10 +5,11 @@ import {
   CATEGORY_SELECTED,
   SEARCH_TERM,
   LINK_SELECTED,
-	CONTACTING,
-	SHARE,
+  CONTACTING,
+  SHARE,
   FORM_DATA,
-  CONTACT_ME
+  CONTACT_ME,
+  CLEAR_RESPONSE
 } from "./types";
 
 export const searchTermEntered = (term) => {
@@ -42,4 +43,8 @@ export const updatingFormData = (data) => {
 export const contactMe = (data) => {
 	const request = axios.post("/api/contactme", data);
 	return { type: CONTACT_ME, payload: request };
+}
+
+export const clearResponse = () => {
+	return { type: CLEAR_RESPONSE, payload: "" }
 }

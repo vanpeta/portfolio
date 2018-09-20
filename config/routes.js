@@ -35,36 +35,35 @@ module.exports = app => {
 			.then( htmlString => {
 				const mailer = new Mailer();
 				mailer.sendEmail(process.env.emailTo, subject, htmlString, response => {
-					return (customeResponse.emailme = {
+					customeResponse.emailme = {
 						status: 200,
 						message: "Email template 'contact' from " + process.env.email + " was sent to " + process.env.emailTo,
 						response: response
-					});
+					};
 				})
+				//email sender
+				const subjectSender = data.name + ", Thank You For Reaching Out";
+				HtmlGenerator("contactSender", data)
+					.then(htmlString => {
+						const mailer = new Mailer();
+						mailer.sendEmail(data.email, subjectSender, htmlString, response => {
+							customeResponse.emailsender = {
+								status: 200,
+								message: "Email template 'contactSender' from " + process.env.email + " was sent to " + data.email,
+								response: response
+							};
+							res.status(200);
+							res.send(customeResponse);
+						})
+					}).catch(err => {
+						customeResponse.emailsender = { status: 400, err: err };
+						res.status(400);
+						res.send(customeResponse);
+					});
 			}).catch(err => {
 				customeResponse.emailme = { status: 400, err: err };
 				res.status(400);
         res.send(customeResponse);
 			});
-		//email sender
-		const subjectSender = data.name + ", Thank You For Reaching Out";
-		HtmlGenerator("contactSender", data)
-			.then(htmlString => {
-				const mailer = new Mailer();
-				mailer.sendEmail(data.email, subjectSender, htmlString, response => {
-					return (customeResponse.emailsender = {
-						status: 200,
-						message: "Email template 'contactSender' from " + process.env.email + " was sent to " + process.env.emailTo,
-						response: response
-					});
-				})
-			}).catch(err => {
-				customeResponse.emailsender = { status: 400, err: err };
-				res.status(400);
-				res.send(customeResponse);
-			});
-		res.status(200);
-		console.log("this is the actual response", customeResponse);
-		res.send(customeResponse);
 	});
 }

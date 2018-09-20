@@ -6,3 +6,4 @@ export const CONTACTING = "CONTACTING";
 export const FORM_DATA = "FORM_DATA";
 export const CONTACT_ME = "CONTACT_ME";
 export const SHARE = "SHARE";
+export const CLEAR_RESPONSE = "CLEAR_RESPONSE";
