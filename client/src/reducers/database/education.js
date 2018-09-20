@@ -33,7 +33,7 @@ export default {
 		{
 			title: "Business Administration Program",
 			url: "http://www.mastermas.com/Reportajes/P1.asp?Reportaje=936",
-			description: "This program focuses on developing bussiness skills for college graduates that were awarded with the Optimus Scholarship upon graduation. The program makes compatible a working intership with academic lectures during a period of 18 months. It focuses on bussines ethics, global bussines vision, anthropology, human behavior, negotiation techniques, team working, motivation and more.",
+			description: "This program focuses on developing businesss skills for college graduates that were awarded with the Optimus Scholarship upon graduation. The program makes compatible a working intership with academic lectures during a period of 18 months. It focuses on business ethics, global business vision, anthropology, human behavior, negotiation techniques, team working, motivation and more.",
 			category: "Advanced",
 			links: [
 				{
