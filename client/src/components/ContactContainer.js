@@ -33,7 +33,7 @@ class ContactContainer extends Component {
 	}
 	renderSpinner() {
 		if (this.state.showGif && this.props.contactMeResponse.status === 200) {
-			return <div className="thankYou">Thank you, Your message was sent.</div>
+			return <div className="thankYou">Thank you, your message was sent.</div>
 		}
 		if (this.state.showGif && this.props.contactMeResponse.status === 400) {
 			return <div className="thankYou">Something went wrong, please try again.</div>

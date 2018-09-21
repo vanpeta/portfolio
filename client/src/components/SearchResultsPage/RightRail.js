@@ -7,15 +7,9 @@ import MapContainer from "./MapContainer";
 
 class RightRail extends Component {
 	renderMap() {
-		if (this.props.mapLocation.lat && this.props.mapLocation.lng) {
-			return (
-				<MapContainer
-					lat={this.props.link.mapLocation.lat}
-					lng={this.props.link.mapLocation.lng}
-					name={this.props.link.text}
-				/>
-			)
-		}
+		if (this.props.link.mapLocation.lat && this.props.link.mapLocation.lng) {
+      return <MapContainer lat={this.props.link.mapLocation.lat} lng={this.props.link.mapLocation.lng} name={this.props.link.text} />;
+    }
 		return null;
 	}
 	renderImage() {

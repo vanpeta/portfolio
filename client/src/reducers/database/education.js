@@ -5,7 +5,7 @@ export default {
 		{
 			title: "Bachelor of Arts in Communication Sciences - Advertising and Public Relations",
 			url: "",
-			description: "5 years college degree focused on communication sciences. Innovetion, trends, technology, persuasion, ethics and marketing are just some of the disciplines this degree developes in deep.",
+			description: "5 year college degree focused on communication sciences. Innovation, trends, technology, persuasion, ethics and marketing are just some of the disciplines this degree develops in depth.",
 			category: "Advanced",
 			links: [
 				{
@@ -19,7 +19,7 @@ export default {
 		{
 			title: "Web Development Inmersive Program",
 			url: "https://generalassemb.ly/education/web-development-immersive",
-			description: "A 6 months intensive program with focus on computer science and web development. It touches the main areas a full stack developer must know. Back-end technologies like Ruby on Rails and Node.js, databases SQL (postgresql) and noSQL (mongodb) and modern front-end javascript frameworks like Angular or React and team collaboration strategies are some of the skills taught.",
+			description: "A 6 month intensive program with a focus on computer science and web development. It touched on the main areas a full stack developer must know. Back-end technologies like Ruby on Rails and Node.js, databases SQL (postgresql) and noSQL (mongodb) and modern front-end javascript frameworks like Angular or React and team collaboration strategies are some of the skills taught.",
 			category: "Advanced",
 			links: [
 				{
@@ -33,7 +33,7 @@ export default {
 		{
 			title: "Business Administration Program",
 			url: "http://www.mastermas.com/Reportajes/P1.asp?Reportaje=936",
-			description: "This program focuses on developing businesss skills for college graduates that were awarded with the Optimus Scholarship upon graduation. The program makes compatible a working intership with academic lectures during a period of 18 months. It focuses on business ethics, global business vision, anthropology, human behavior, negotiation techniques, team working, motivation and more.",
+			description: "This program focused on developing businesss skills for college graduates that were awarded with the Optimus Scholarship upon graduation. The program combined a working intership with academic lectures for a period of 18 months. It focused on business ethics, global business vision, anthropology, human behavior, negotiation techniques, team work and motivation.",
 			category: "Advanced",
 			links: [
 				{
