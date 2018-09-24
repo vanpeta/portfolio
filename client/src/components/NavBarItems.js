@@ -25,7 +25,7 @@ class NavBarItems extends Component {
   }
 
   render() {
-    const contacting = this.props.isContacting ? <ContactContainer /> : null;
+    const contacting = this.props.showContactForm ? <ContactContainer /> : null;
     const sharing = this.props.isSharing ? <SharingContainer /> : null;
     return (
       <div className={this.props.page + "_NavBarItems"}>
@@ -45,9 +45,7 @@ class NavBarItems extends Component {
 }
 
 function mapStateToProps (state) {
-	return {
-    isContacting: state.contacting, isSharing: state.sharing
-	}
+	return { showContactForm: state.showContactForm, isSharing: state.sharing };
 }
 
 function mapDispatchToProps(dispatch) {

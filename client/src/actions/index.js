@@ -8,7 +8,7 @@ import {
   CONTACTING,
   SHARE,
   FORM_DATA,
-  CONTACT_ME,
+	CONTACT_ME_REQUEST,
   CLEAR_RESPONSE
 } from "./types";
 
@@ -40,9 +40,9 @@ export const updatingFormData = (data) => {
 	return { type: FORM_DATA, payload: data };
 }
 
-export const contactMe = (data) => {
+export const contactMeRequest = (data) => {
 	const request = axios.post("/api/contactme", data);
-	return { type: CONTACT_ME, payload: request };
+	return { type: CONTACT_ME_REQUEST, payload: request };
 }
 
 export const clearResponse = () => {

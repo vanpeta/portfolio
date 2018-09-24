@@ -48,10 +48,14 @@
 	text-align: center;
 }
 
+.ContactFormTextArea_container, .ContactFormName_container, .ContactFormEmail_container {
+	text-align: left;
+}
+
 .ContactFormTextArea {
 	width: 95%;
 	height: 150px;
-	margin: 10px auto;
+	margin: 10px auto 20px;
 	display: block;
 	background-color: #ffffff;
 	text-align: left;
@@ -68,7 +72,7 @@
 
 .ContactFormName, .ContactFormEmail {
 	width: 95%;
-	margin: 10px auto;
+	margin: 10px auto 20px;
 	display: block;
 	background-color: #ffffff;
 	text-align: left;
@@ -79,10 +83,17 @@
 	line-height: 32px;
 }
 
+.error {
+	position: absolute;
+	margin: -17px 0px 0px 10px;
+	color: red;
+	font-size: 13px;
+}
+
 .contactMeResponse {
 	width: 150px;
 	height: auto;
-	margin: -10px auto;
+	margin: -20px auto;
 }
 
 .contactMeResponse > img{
