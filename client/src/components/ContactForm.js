@@ -26,7 +26,7 @@ class ContactForm extends Component {
 	}
 	
 	componentWillReceiveProps(nextProps) {
-		if (nextProps.response.status === 200) {
+		if (nextProps.response.status) {
 			this.setState({ gif: false })
 		}
 	}
