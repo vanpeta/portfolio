@@ -1,3 +1,4 @@
+import ReactGA from "react-ga";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
@@ -27,3 +28,6 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#root")
 );
+
+ReactGA.initialize(process.env.REACT_APP_GA, { debug: true });
+ReactGA.pageview("/homepage");
