@@ -15,7 +15,7 @@ class InputField extends Component {
     this.state = {
       searchTerm: "",
       submit: false,
-      suggestions: false
+      showSuggestions: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,23 +32,20 @@ class InputField extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.props.currentSearch) {
+    if (this.state.searchTerm) {
       this.props.searchTermEntered(this.props.currentSearch);
       this.props.linkSelected(null);
-      this.setState({
-        submit: true
-      });
+      this.setState({ submit: true });
     }
   }
 
   showSuggestions() {
-    this.setState({ suggestions: true });
+    this.setState({ showSuggestions: true });
   }
 
-  hideSuggestions() {
-    setTimeout(() => {
-      this.setState({ suggestions: false });
-    }, 200);
+  hideSuggestions(e) {
+    e.stopPropagation();
+      this.setState({ showSuggestions: false });
   }
 
   componentDidUpdate() {
@@ -60,7 +57,7 @@ class InputField extends Component {
   }
 
   render() {
-    const suggestions = this.state.suggestions && !this.state.searchTerm ? <SuggestionsList page={this.props.page}/> : null; 
+    const suggestions = this.state.showSuggestions && !this.state.searchTerm ? <SuggestionsList page={this.props.page}/> : null; 
     if (this.state.submit) {
       return <Redirect to="/search_results" />;
     }

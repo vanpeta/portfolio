@@ -7,7 +7,7 @@ class SuggestionsList extends Component {
 	renderSugesstions() {
 		const suggestions = ["about", "Education", "Experience", "Skills"];
 		return suggestions.map((suggestion, index) => {
-			return <Suggestion key={index} text={suggestion} />
+      return <Suggestion key={index} text={suggestion} page={this.props.page} />
 		})
 	}
   render() {

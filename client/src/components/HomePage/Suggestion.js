@@ -1,20 +1,35 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { Redirect } from "react-router-dom";
 
-import { searchTerm } from "../../actions/index";
+import { searchTerm, searchTermEntered } from "../../actions/index";
 
 class Suggestion extends Component {
 	constructor(props) {
 		super(props);
+		this.state = { redirect: false };
 		this.handleClick = this.handleClick.bind(this);
 	}
 	handleClick() {
-		this.props.searchTerm(this.props.text)
+		this.props.searchTerm(this.props.text);
+		this.props.searchTermEntered(this.props.text);
+	}
+
+	componentWillReceiveProps(newProps) {
+		if (newProps.currentSearch !== this.props.currentSearch && this.props.currentSearch) {
+			this.props.searchTermEntered(newProps.currentSearch);
+		}
+		if (this.props.page === "HomePage") {
+			this.setState({ redirect: true });
+		}
 	}
 	render() {
+		if (this.state.redirect) {
+			return <Redirect to="/search_results" />;
+		}
 		return (
-			<div className="Suggestion" onClick={this.handleClick}>
+			<div className="Suggestion" onMouseDown={this.handleClick}>
 				{this.props.text}
 			</div>
 		);
@@ -22,10 +37,16 @@ class Suggestion extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators(
-		{ searchTerm },
-		dispatch
-	);
+	return bindActionCreators({ searchTerm, searchTermEntered }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(Suggestion);
+function mapStateToProps(state) {
+	return {
+		currentSearch: state.searchTerm
+	}
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Suggestion);

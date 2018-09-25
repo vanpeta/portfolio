@@ -36,6 +36,7 @@ class SearchResultsPage extends Component {
   }
 
   render() {
+    console.log("PAGE RESULTS PROPS!!!", this.props)
     return (
       <div className="">
         <NavBar />
