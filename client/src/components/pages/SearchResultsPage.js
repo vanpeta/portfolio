@@ -9,7 +9,7 @@ import RightRail from "../SearchResultsPage/RightRail";
 
 class SearchResultsPage extends Component {
   shouldComponentUpdate(nextProps) {
-    if (nextProps.location.key !== this.props.location.key || nextProps.searchTerm !== this.props.searchTerm) {
+    if (nextProps.location.key !== this.props.location.key || nextProps.results === "No matches") {
       return false;
     }
     return true;

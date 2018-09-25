@@ -5,7 +5,7 @@ import "./styles/Suggestion.css";
 
 class SuggestionsList extends Component {
 	renderSugesstions() {
-		const suggestions = ["about", "Education", "Experience", "Skills"];
+		const suggestions = ["About", "Education", "Experience", "Skills", "Projects"];
 		return suggestions.map((suggestion, index) => {
       return <Suggestion key={index} text={suggestion} page={this.props.page} />
 		})
