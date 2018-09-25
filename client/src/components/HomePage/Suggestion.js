@@ -16,10 +16,7 @@ class Suggestion extends Component {
 		this.props.searchTermEntered(this.props.text);
 	}
 
-	componentWillReceiveProps(newProps) {
-		if (newProps.currentSearch !== this.props.currentSearch && this.props.currentSearch) {
-			this.props.searchTermEntered(newProps.currentSearch);
-		}
+	componentWillReceiveProps() {
 		if (this.props.page === "HomePage") {
 			this.setState({ redirect: true });
 		}
