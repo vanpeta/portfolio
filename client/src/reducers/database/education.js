@@ -5,7 +5,7 @@ export default {
 		{
 			title: "Bachelor of Arts in Communication Sciences - Advertising and Public Relations",
 			url: "",
-			description: "5 year college degree focused on communication sciences. Innovation, trends, technology, persuasion, ethics and marketing are just some of the disciplines this degree develops in depth.",
+			description: "5-year college degree focused on communication sciences. Innovation, trends, technology, persuasion, ethics and marketing are just some of the disciplines this degree develops in depth.",
 			category: "Advanced",
 			links: [
 				{
@@ -17,9 +17,9 @@ export default {
 			]
 		},
 		{
-			title: "Web Development Inmersive Program",
+			title: "Web Development Immersive Program",
 			url: "https://generalassemb.ly/education/web-development-immersive",
-			description: "A 6 month intensive program with a focus on computer science and web development. It touched on the main areas a full stack developer must know. Back-end technologies like Ruby on Rails and Node.js, databases SQL (postgresql) and noSQL (mongodb) and modern front-end javascript frameworks like Angular or React and team collaboration strategies are some of the skills taught.",
+			description: "A 6-month intensive program with a focus on computer science and web development. It touched on the main areas a full stack developer must know. Back-end technologies like Ruby on Rails and Node.js, databases SQL (postgresql) and noSQL (mongodb) and modern front-end javascript frameworks like Angular or React and team collaboration strategies are some of the skills taught.",
 			category: "Advanced",
 			links: [
 				{
@@ -87,7 +87,7 @@ export default {
 			]
 		},
 		{
-			title: "High School speciality in Science",
+			title: "High School specialization in Science",
 			url: "",
 			description: "4 years with a focus on subjects like chemistry, physics, technical drawing, algebra, calculus.",
 			category: "Traditional",
