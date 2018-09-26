@@ -28,14 +28,14 @@ module.exports = app => {
 	//CONTACT FORM SUBMITTED
 	app.post("/api/contactme", (req, res) => {
 		const data = req.body;
-		let customeResponse = {};
+		let customerResponse = {};
 		//email me
 		const subject = data.name + " Sent you a message from your portfolio";
 		HtmlGenerator("contact", data)
 			.then( htmlString => {
 				const mailer = new Mailer();
 				mailer.sendEmail(process.env.emailTo, subject, htmlString, response => {
-					customeResponse.emailme = {
+					customerResponse.emailme = {
 						status: 200,
 						message: "Email template 'contact' from " + process.env.email + " was sent to " + process.env.emailTo,
 						response: response
@@ -47,23 +47,23 @@ module.exports = app => {
 					.then(htmlString => {
 						const mailer = new Mailer();
 						mailer.sendEmail(data.email, subjectSender, htmlString, response => {
-							customeResponse.emailsender = {
+							customerResponse.emailsender = {
 								status: 200,
 								message: "Email template 'contactSender' from " + process.env.email + " was sent to " + data.email,
 								response: response
 							};
 							res.status(200);
-							res.send(customeResponse);
+							res.send(customerResponse);
 						})
 					}).catch(err => {
-						customeResponse.emailsender = { status: 400, err: err };
+						customerResponse.emailsender = { status: 400, err: err };
 						res.status(400);
-						res.send(customeResponse);
+						res.send(customerResponse);
 					});
 			}).catch(err => {
-				customeResponse.emailme = { status: 400, err: err };
+				customerResponse.emailme = { status: 400, err: err };
 				res.status(400);
-        res.send(customeResponse);
+        res.send(customerResponse);
 			});
 	});
 }
