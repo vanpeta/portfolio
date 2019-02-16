@@ -51,13 +51,13 @@ class ContactForm extends Component {
 function validate(values) {
 	const errors = {}
 	if (!values.message) {
-		errors.message = "This field is required";
+		errors.message = "Don't you want to say something? We need this.";
 	}
 	if (!values.name) {
-		errors.name = "This field is required";
+		errors.name = "How do you want me to call you?";
 	}
 	if (!values.email) {
-		errors.email = "This field is required";
+		errors.email = "Without a valid email I won't be able to get back to you.";
 	} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
 		errors.email = "Invalid email address";
 	}

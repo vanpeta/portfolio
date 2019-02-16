@@ -1,7 +1,15 @@
 export default {
   searchTerms: ["experience", "what have you done?", "jobs", "job", "past experience", "past jobs", "companies"],
-  about: "companies I worked for (0.11 century)",
+  about: "companies I worked for (0.12 centuries)",
   results: [
+    {
+      title: "2018 to ongoing Application Developer at Farmers Insurance. Woodland Hills, CA.",
+      url: "https://www.farmers.com/",
+      description:
+        "Working with a developers team in an agile SAFE process, continuosly developing the Customer Self Service web application for Farmers' customers. The developing stack includes AngularJS and Sass in the front end, Java for the back end and PostgreSQL DB. Salesforce and Heroku serve as hosting and Git and github for versioin control. A local Node.js app serves the app locally.",
+      category: "Developer",
+      links: []
+    },
     {
 			title: "2016 to 2018 Front End Developer at GUESS? Inc. Los Angeles, CA.",
       url: "https://shop.guess.com/en",
