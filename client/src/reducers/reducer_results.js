@@ -16,7 +16,6 @@ export default function (state = "", action) {
 				axios.get("/api/noresults?term=" + action.payload);
 				return results = "No matches"
 			};
-			console.log("xxxx", results);
     	return results;
     default:
   }
