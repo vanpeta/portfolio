@@ -18,6 +18,7 @@
 }
 
 .Suggestion {
+	cursor: pointer;
 	padding: 5px;
 	border: solid 1px #ffffff;
 }
